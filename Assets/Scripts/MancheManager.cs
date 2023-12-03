@@ -126,10 +126,10 @@ public class MancheManager : MonoBehaviour
         if (CartesSurTable.Count == 4)
         {
             DesignerGagnantManche();
-            foreach(Carte carte_ in CartesSurTable)
+            for (int i = 0; i < CartesSurTable.Count; i++)
             {
-                CartesSurTable.Remove(carte_);
-            }
+                CartesSurTable.RemoveAt(0);
+            }           
         }
 
         Debug.Log("Carte jouée : " + carte.ObtenirNomValeur() + " " + carte.ObtenirNomCouleur() + " Valeur dans la manche : " + carte.ValeurDansLaManche(couleurContrat) );
